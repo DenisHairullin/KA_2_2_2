@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring cars</title>
+    <link th:href="@{/styles/main.css}" rel="stylesheet">
+</head>
+<body>
+    <h2>Cars</h2>
+    <table class="table">
+        <tr>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Color</th>
+        </tr>
+        <tr th:each="car : ${cars}">
+            <td th:text="${car.manufacturer}">Manufacturer</td>
+            <td th:text="${car.model}">Model</td>
+            <td th:text="${car.color}">Color</td>
+        </tr>
+    </table>
+</body>
+</html>
