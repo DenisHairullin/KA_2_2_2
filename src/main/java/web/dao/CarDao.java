@@ -5,6 +5,4 @@ import java.util.List;
 
 public interface CarDao {
     List<Car> listCars();
-
-    List<Car> listCars(int count);
 }
